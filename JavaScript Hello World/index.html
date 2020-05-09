@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+    <p>Before the script...</p>
+
+    <script>
+      //alert( 'Hello, world!' );
+     </script>
+
+     <p>...After the script.</p>
+
+   <!--
+     Scripts externos 
+     Se tivermos muito codigo JavaScript, podemos coloca-lo em um arquivo separado 
+     Os arquivos de script sao anexados ao HTML com o src atributo:
+
+     <script src="/path/to/script.js"></script>
+
+     Aqui /path/to/script.js esta um caminho absoluto para o script a partir da raiz do site Pode-se tambem fornecer um caminho relativo a partir da pagina atual. Por exemplo, src="script.js" signigicaria um arquivo "script.js" na pasta atual.
+
+     Tambem podemos fornecer um URL completo. Por exemplo
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+
+     Para anexar varios scripts,usa varias tags:
+
+     <script src="/js/script1.js"></script>
+     <script src="/js/script2.js"></script> 
+
+
+    Observe 
+    Como regra, apenas os scripts masi simples sao colocados em HTML. Os mais complexos residem em arquivos separados.
+
+    A vantagem de um arquivo separado e que o navegador fara o download e o armazenara em seu cache.
+
+    Outras pagina que referenciam o mesmo script o tiram do cache em vez de baixa-lo, portanto, o arquivo e baixado apenas uma vez.
+
+    Isso reduz o trafego e torna as paginas mais rapidas.
+
+
+    !Se src estiver defnido, o conteudo do script sera ignorado.
+    Um unica <script> tag nao pode conter o src atributo e o codigo
+
+    Isso nao vai funcionar
+
+    <script src="file.js">
+      <alert(1); // The content is ignored, because src is site
+      </script>
+
+
+      Devemos escolher um codigo externo <script src="...."> ou um regular
+      <script> com codigo.
+
+      O exemplo acima pode ser dividido em dois scripts para funcionar:
+
+      <script src="file.js"></script>
+      <script>
+        alert(1);
+        </script>
+
+        Sumario 
+
+        Podemos usar uma <script> tag para adicionar codigo JavaScript a uma pagina 
+        Os atributos type e language nao sao necessarios
+        Um Script em um arquivo externo pode ser inserido com <script sr="path/to/script.js"></script>.  
+
+   -->
+ 
+  </body>
+
+  </html>
